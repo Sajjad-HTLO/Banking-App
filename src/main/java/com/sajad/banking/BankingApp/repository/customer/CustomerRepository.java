@@ -10,8 +10,5 @@ import java.util.Optional;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Integer>, PagingAndSortingRepository<Customer, Integer> {
 
-    @Override
-    Optional<Customer> findById(Integer integer);
-
     Optional<Customer> findByPhoneNumber(String phoneNumber);
 }
